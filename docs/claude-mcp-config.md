@@ -17,21 +17,19 @@ User-scoped — applies globally across all Claude Code sessions and projects on
 | `obsidian-personal` | LifeOS-vault (personal) | `/home/tomkw/vaults/LifeOS-vault` |
 | `obsidian-work` | work-v2-vault | `/home/tomkw/vaults/work-v2-vault` |
 
-Both use `--trashMode local`: deletes go to a `.trash` folder inside the vault rather than being permanently removed.
-
 Raw entries in `~/.claude.json`:
 
 ```json
 "obsidian-personal": {
   "type": "stdio",
   "command": "/home/tomkw/.local/bin/mcpvault-wrapper.sh",
-  "args": ["/home/tomkw/vaults/LifeOS-vault", "--trashMode", "local"],
+  "args": ["/home/tomkw/vaults/LifeOS-vault"],
   "env": {}
 },
 "obsidian-work": {
   "type": "stdio",
   "command": "/home/tomkw/.local/bin/mcpvault-wrapper.sh",
-  "args": ["/home/tomkw/vaults/work-v2-vault", "--trashMode", "local"],
+  "args": ["/home/tomkw/vaults/work-v2-vault"],
   "env": {}
 }
 ```
@@ -55,7 +53,7 @@ The wrapper is Node-version-agnostic — it resolves `mcpvault` via nvm at runti
 
 - `--scope user`: registration is in `~/.claude.json`, not in any project's `.claude/` folder
 - mcpvault has **full read/write access** to the registered vault directory — no auth layer
-- `--trashMode local` is the only delete safeguard; no other access controls exist
+- mcpvault deletes are permanent by default — `--trashMode local` flag exists in theory but mcpvault 0.11.0 concatenates all args into the vault path, breaking it; avoid until fixed upstream
 - Trust model: mcpvault trusts its parent process (Claude Code); do not register untrusted vaults
 
 ## Available tools
@@ -77,7 +75,7 @@ claude mcp list
 claude mcp remove obsidian-personal
 
 # Re-register (e.g. after Node upgrade)
-claude mcp add --scope user obsidian-personal -- /path/to/mcpvault /home/tomkw/vaults/LifeOS-vault --trashMode local
+claude mcp add --scope user obsidian-personal -- ~/.local/bin/mcpvault-wrapper.sh /home/tomkw/vaults/LifeOS-vault
 ```
 
 ## Dependencies
