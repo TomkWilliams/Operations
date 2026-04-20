@@ -24,27 +24,32 @@ Raw entries in `~/.claude.json`:
 ```json
 "obsidian-personal": {
   "type": "stdio",
-  "command": "/home/tomkw/.nvm/versions/node/v22.22.2/bin/mcpvault",
+  "command": "/home/tomkw/.local/bin/mcpvault-wrapper.sh",
   "args": ["/home/tomkw/vaults/LifeOS-vault", "--trashMode", "local"],
   "env": {}
 },
 "obsidian-work": {
   "type": "stdio",
-  "command": "/home/tomkw/.nvm/versions/node/v22.22.2/bin/mcpvault",
+  "command": "/home/tomkw/.local/bin/mcpvault-wrapper.sh",
   "args": ["/home/tomkw/vaults/work-v2-vault", "--trashMode", "local"],
   "env": {}
 }
 ```
 
-## Binary location
+## Wrapper script
 
-mcpvault is installed globally via nvm:
+mcpvault uses `#!/usr/bin/env node` — when Claude Code spawns it as a subprocess, nvm has not initialised, so `node` is not in PATH and the process exits immediately (`MCP error -32000: Connection closed`). Using the absolute binary path alone does not fix this.
 
+A wrapper script at `~/.local/bin/mcpvault-wrapper.sh` loads nvm before calling mcpvault:
+
+```bash
+#!/usr/bin/env bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+exec mcpvault "$@"
 ```
-/home/tomkw/.nvm/versions/node/v22.22.2/bin/mcpvault
-```
 
-The absolute path is used in the MCP registration because nvm is not in PATH for non-interactive shells. If Node is upgraded, re-register with the new path (`which mcpvault` after activating nvm).
+The wrapper is Node-version-agnostic — it resolves `mcpvault` via nvm at runtime, so no reregistration is needed after Node upgrades.
 
 ## Permissions model
 
