@@ -73,7 +73,15 @@
       "Bash(git -C /home/tomkw/src/Operations push)",
       "mcp__fastmail-email__send_draft",
       "Bash(git -C /home/tomkw/src/Operations add .claude/settings.json)",
-      "Bash(git -C /home/tomkw/src/Operations commit -m \"chore: add git push and send_draft to approved tools\")"
+      "Bash(git -C /home/tomkw/src/Operations commit -m \"chore: add git push and send_draft to approved tools\")",
+      "Bash(git -C /home/tomkw/.claude status)",
+      "Bash(git -C /home/tomkw/src/lab status)",
+      "Bash(git -C /home/tomkw/src/travel-os status)",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault status)",
+      "Bash(git -C /home/tomkw/vaults/work-v2-vault status)",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault diff \"2 areas/daily-logs/2026-04-20.md\")",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault add \"2 areas/daily-logs/2026-04-20.md\" \"2 areas/daily-logs/2026-04-21.md\")",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault commit -m ' *)"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
