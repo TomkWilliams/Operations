@@ -67,7 +67,13 @@
       "Bash(git -C /home/tomkw/src/Operations diff .claude/settings.json)",
       "mcp__fastmail-email__search_contacts",
       "mcp__fastmail-email__get_email",
-      "mcp__fastmail-email__create_draft"
+      "mcp__fastmail-email__create_draft",
+      "Bash(git -C /home/tomkw/src/homeinfra push)",
+      "Bash(git -C /home/tomkw/dotfiles push)",
+      "Bash(git -C /home/tomkw/src/Operations push)",
+      "mcp__fastmail-email__send_draft",
+      "Bash(git -C /home/tomkw/src/Operations add .claude/settings.json)",
+      "Bash(git -C /home/tomkw/src/Operations commit -m \"chore: add git push and send_draft to approved tools\")"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
