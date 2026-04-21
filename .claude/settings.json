@@ -38,14 +38,17 @@
       "Bash(rm ~/.claude/CLAUDE.md ~/.claude/settings.json)",
       "Bash(rm -rf ~/.claude/agents)",
       "Bash(rm ~/.local/bin/mcp-npx-wrapper.sh ~/.local/bin/mcpvault-wrapper.sh ~/.local/bin/modelcheck.sh)",
-      "Bash(stow claude *)"
+      "Bash(stow claude *)",
+      "Bash(gh repo *)",
+      "mcp__obsidian-work__search_notes"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
       "/home/tomkw/.config/vdirsyncer",
       "/home/tomkw/.local/share",
       "/home/tomkw/.config",
-      "/home/tomkw/dotfiles"
+      "/home/tomkw/dotfiles",
+      "/home/tomkw/src/homeinfra"
     ]
   }
 }
