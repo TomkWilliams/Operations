@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "../personal-platform"
+		},
+		{
+			"path": "../../.claude"
+		},
+		{
+			"path": "../../.copilot"
+		},
+		{
+			"path": "../../.vault-rag"
 		}
 	],
 	"settings": {}

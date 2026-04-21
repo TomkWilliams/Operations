@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/tomkw/.config/**)",
+      "mcp__obsidian-work__list_directory",
+      "mcp__obsidian-work__read_multiple_notes",
+      "Bash(sqlite3 /home/tomkw/snap/onedrive-cli/42/.config/onedrive/items.sqlite3 \"SELECT name, type, parentId FROM items LIMIT 100;\")",
+      "Bash(python3 -c ' *)",
+      "Bash(cp /home/tomkw/snap/onedrive-cli/42/.config/onedrive/items.sqlite3 /tmp/items_copy.sqlite3)",
+      "Read(//home/tomkw/.claude/**)",
+      "Read(//home/tomkw/**)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "mcp__obsidian-personal__read_multiple_notes",
+      "mcp__fastmail-email__get_unread_emails",
+      "mcp__fastmail-email__archive_email",
+      "mcp__fastmail-email__list_mailboxes",
+      "mcp__fastmail-email__list_calendars",
+      "Bash(khard --version)",
+      "Bash(apt-cache search *)",
+      "mcp__fastmail-email__create_mailbox",
+      "mcp__fastmail-email__move_email",
+      "mcp__fastmail-email__delete_email",
+      "Bash(git -C /home/tomkw/src/Operations diff)",
+      "Bash(git -C /home/tomkw/src/Operations log --oneline -5)",
+      "Bash(git -C /home/tomkw/src/Operations add Operations.code-workspace .claude/)",
+      "Bash(git -C /home/tomkw/src/Operations commit -m ' *)"
+    ],
+    "additionalDirectories": [
+      "/home/tomkw/.claude",
+      "/home/tomkw/.config/vdirsyncer",
+      "/home/tomkw/.local/share",
+      "/home/tomkw/.config"
+    ]
+  }
+}
