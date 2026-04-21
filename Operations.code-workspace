@@ -7,6 +7,9 @@
 			"path": "../personal-platform"
 		},
 		{
+			"path": "../../dotfiles"
+		},
+		{
 			"path": "../../.claude"
 		},
 		{
