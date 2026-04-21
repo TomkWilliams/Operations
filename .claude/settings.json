@@ -23,13 +23,29 @@
       "Bash(git -C /home/tomkw/src/Operations diff)",
       "Bash(git -C /home/tomkw/src/Operations log --oneline -5)",
       "Bash(git -C /home/tomkw/src/Operations add Operations.code-workspace .claude/)",
-      "Bash(git -C /home/tomkw/src/Operations commit -m ' *)"
+      "Bash(git -C /home/tomkw/src/Operations commit -m ' *)",
+      "Bash(git -C /home/tomkw/src/Operations show --stat HEAD)",
+      "Bash(stow --version)",
+      "Bash(apt-cache show *)",
+      "Bash(cp ~/.claude/CLAUDE.md ~/dotfiles/claude/.claude/)",
+      "Bash(cp ~/.claude/settings.json ~/dotfiles/claude/.claude/)",
+      "Bash(cp -r ~/.claude/agents/* ~/dotfiles/claude/.claude/agents/)",
+      "Bash(cp ~/.config/aerc/aerc.conf ~/dotfiles/aerc/.config/aerc/)",
+      "Bash(cp ~/.config/aerc/binds.conf ~/dotfiles/aerc/.config/aerc/)",
+      "Bash(cp ~/.config/aerc/accounts.conf ~/dotfiles/aerc/.config/aerc/)",
+      "Bash(cp ~/.config/khal/config ~/dotfiles/khal/.config/khal/)",
+      "Bash(cp ~/.config/khard/khard.conf ~/dotfiles/khard/.config/khard/)",
+      "Bash(rm ~/.claude/CLAUDE.md ~/.claude/settings.json)",
+      "Bash(rm -rf ~/.claude/agents)",
+      "Bash(rm ~/.local/bin/mcp-npx-wrapper.sh ~/.local/bin/mcpvault-wrapper.sh ~/.local/bin/modelcheck.sh)",
+      "Bash(stow claude *)"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
       "/home/tomkw/.config/vdirsyncer",
       "/home/tomkw/.local/share",
-      "/home/tomkw/.config"
+      "/home/tomkw/.config",
+      "/home/tomkw/dotfiles"
     ]
   }
 }
