@@ -94,7 +94,25 @@
       "Bash(bash scripts/export/android-export.sh --device-slug android-phone-1 --dry-run)",
       "Skill(commit-commands:commit)",
       "Skill(commit-commands:commit:*)",
-      "mcp__obsidian-work__read_note"
+      "mcp__obsidian-work__read_note",
+      "mcp__obsidian-personal__delete_note",
+      "mcp__obsidian-personal__move_note",
+      "Bash(rm /home/tomkw/vaults/LifeOS-vault/backup-vault.ps1)",
+      "Bash(mv \"/home/tomkw/vaults/LifeOS-vault/0 inbox/enterprise_apps_catalog.json\" \"/home/tomkw/vaults/LifeOS-vault/2 areas/Current Job - Britebound fmrly ASA/enterprise_apps_catalog.json\")",
+      "Bash(bash /home/tomkw/.claude/plugins/cache/unifi-plugins/unifi-network/0.14.6/scripts/set-env.sh UNIFI_NETWORK_HOST=10.8.1.254 UNIFI_NETWORK_USERNAME=discovery.admin 'UNIFI_NETWORK_PASSWORD=REDACTED_PASSWORD' UNIFI_NETWORK_API_KEY=REDACTED_API_KEY)",
+      "Bash(python3 -m json.tool /home/tomkw/src/Operations/.claude/settings.local.json)",
+      "Bash(python3 -m json.tool /home/tomkw/.claude/settings.local.json)",
+      "mcp__plugin_unifi-network_unifi-network__unifi_execute",
+      "Bash(uvx unifi-network-mcp==0.14.6 --help)",
+      "Bash(UNIFI_NETWORK_HOST=10.8.1.254 UNIFI_NETWORK_USERNAME=discovery.admin UNIFI_NETWORK_PASSWORD='REDACTED_PASSWORD' uvx unifi-network-mcp==0.14.6)",
+      "Bash(git -C /home/tomkw/src/homeinfra status --short)",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault status --short)",
+      "Bash(git -C /home/tomkw/src/Operations status --short)",
+      "Bash(git -C /home/tomkw/dotfiles status --short)",
+      "Bash(git -C /home/tomkw/src/personal-platform status --short)",
+      "Bash(git -C /home/tomkw/dotfiles diff claude/.claude/CLAUDE.md)",
+      "Bash(git -C /home/tomkw/src/Operations diff --stat)",
+      "Bash(git -C /home/tomkw/src/Operations commit -m 'chore: approve tools and add vault/homeinfra directories to workspace')"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
@@ -103,7 +121,11 @@
       "/home/tomkw/.config",
       "/home/tomkw/dotfiles",
       "/home/tomkw/src/homeinfra",
-      "/home/tomkw/vaults/LifeOS-vault/3 resources"
+      "/home/tomkw/vaults/LifeOS-vault/3 resources",
+      "/home/tomkw/vaults/work-v2-vault/0 inbox",
+      "/home/tomkw/vaults/work-v2-vault/2 areas/daily-log",
+      "/home/tomkw/vaults/LifeOS-vault/1 projects/homeinfra",
+      "/home/tomkw/vaults/LifeOS-vault/2 areas/daily-logs"
     ]
   }
 }
