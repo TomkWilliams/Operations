@@ -81,7 +81,20 @@
       "Bash(git -C /home/tomkw/vaults/work-v2-vault status)",
       "Bash(git -C /home/tomkw/vaults/LifeOS-vault diff \"2 areas/daily-logs/2026-04-20.md\")",
       "Bash(git -C /home/tomkw/vaults/LifeOS-vault add \"2 areas/daily-logs/2026-04-20.md\" \"2 areas/daily-logs/2026-04-21.md\")",
-      "Bash(git -C /home/tomkw/vaults/LifeOS-vault commit -m ' *)"
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault commit -m ' *)",
+      "Bash(git -C /home/tomkw/vaults/LifeOS-vault push)",
+      "mcp__fastmail-email__bulk_email_action",
+      "mcp__fastmail-calendar__create-event",
+      "WebFetch(domain:skills.rest)",
+      "WebFetch(domain:news.ycombinator.com)",
+      "WebFetch(domain:fungies.io)",
+      "Bash(xargs ls *)",
+      "mcp__fastmail-email__update_email_flags",
+      "Bash(chmod +x /home/tomkw/src/personal-platform/scripts/export/android-export.sh /home/tomkw/src/personal-platform/scripts/inventory/android-package-list.sh)",
+      "Bash(bash scripts/export/android-export.sh --device-slug android-phone-1 --dry-run)",
+      "Skill(commit-commands:commit)",
+      "Skill(commit-commands:commit:*)",
+      "mcp__obsidian-work__read_note"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
@@ -89,7 +102,8 @@
       "/home/tomkw/.local/share",
       "/home/tomkw/.config",
       "/home/tomkw/dotfiles",
-      "/home/tomkw/src/homeinfra"
+      "/home/tomkw/src/homeinfra",
+      "/home/tomkw/vaults/LifeOS-vault/3 resources"
     ]
   }
 }
