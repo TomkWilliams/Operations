@@ -137,7 +137,9 @@
       "mcp__plugin_unifi-network_unifi-network__unifi_batch_status",
       "Bash(git -C /home/tomkw/src/Operations commit -m \"chore: approve tools from homeinfra terraform + unifi discovery sessions\")",
       "Bash(chmod +x /home/tomkw/.local/bin/unifi-curl)",
-      "Bash(git -C /home/tomkw/src/Operations commit --amend --no-edit)"
+      "Bash(git -C /home/tomkw/src/Operations remote add origin git@github.com:TomkWilliams/Operations.git)",
+      "Bash(git -C /home/tomkw/src/Operations push origin main)",
+      "Bash(git -C /home/tomkw/src/Operations commit -m \"chore: clean up tool approvals — remove force-push and amend pre-approvals\")"
     ],
     "additionalDirectories": [
       "/home/tomkw/.claude",
